@@ -1,0 +1,714 @@
+@import url("estilos.css");
+
+.mainBolos {
+    padding: 0;
+    background: linear-gradient(135deg, rgba(16, 16, 16, 0.98) 0%, rgba(25, 25, 35, 0.98) 100%);
+    color: white;
+}
+
+.alertaMensaje {
+    margin: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    animation: slideDown 0.3s ease;
+}
+
+.alertaMensaje span {
+    font-size: 1.5em;
+}
+
+.alertaMensaje.exito {
+    background: linear-gradient(135deg, rgba(20, 93, 39, 0.4), rgba(40, 120, 50, 0.3));
+    border: 1px solid rgba(63, 166, 91, 0.5);
+    color: #d9ffe0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccionHero {
+    text-align: center;
+    padding: 60px 24px 40px;
+    background: linear-gradient(180deg, rgba(45, 15, 15, 0.8) 0%, rgba(20, 20, 30, 0.8) 100%);
+    border-bottom: 2px solid rgba(145, 10, 10, 0.4);
+}
+
+.seccionHero h1 {
+    font-size: 3.5em;
+    font-family: "VampireWars", sans-serif;
+    color: rgb(238, 234, 227);
+    margin: 0 0 12px 0;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 15px rgba(145, 10, 10, 0.8);
+    text-transform: uppercase;
+}
+
+.seccionHero .subtitulo {
+    font-size: 1.2em;
+    color: #b8a8a0;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.contenedorBolos {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+    padding: 40px 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ========== FORMULARIO LATERAL ========== */
+
+.formularioAside {
+    position: sticky;
+    top: 30px;
+    height: fit-content;
+}
+
+.cardFormulario {
+    background: linear-gradient(135deg, rgba(40, 40, 50, 0.95) 0%, rgba(32, 32, 45, 0.95) 100%);
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    border-left: 5px solid rgba(145, 10, 10, 0.8);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cardFormulario h2 {
+    font-size: 1.8em;
+    color: rgb(238, 234, 227);
+    margin: 0 0 24px 0;
+    font-family: "VampireWars", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.formuBolos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.grupoInput {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupoInput label {
+    font-size: 0.95em;
+    color: #d0c0b8;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grupoInput input,
+.grupoInput textarea {
+    padding: 14px 16px;
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    background: rgba(8, 8, 8, 0.95);
+    color: #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.grupoInput input:focus,
+.grupoInput textarea:focus {
+    outline: none;
+    border-color: rgb(145, 10, 10);
+    box-shadow: 0 0 12px rgba(145, 10, 10, 0.3);
+    background: rgba(10, 10, 15, 0.95);
+}
+
+.grupoInput input::placeholder,
+.grupoInput textarea::placeholder {
+    color: #777;
+}
+
+.btnCrearBolo {
+    padding: 16px 24px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, rgb(145, 10, 10) 0%, rgb(145, 10, 10) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(145, 10, 10, 0.4);
+}
+
+.btnCrearBolo:hover {
+    background: linear-gradient(135deg, rgb(240, 40, 80) 0%, rgb(200, 20, 60) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(145, 10, 10, 0.6);
+}
+
+.btnCrearBolo:active {
+    transform: translateY(0);
+}
+
+/* ========== MI AGENDA ========== */
+
+.cardAgenda {
+    margin-top: 24px;
+    background: linear-gradient(135deg, rgba(35, 30, 45, 0.95) 0%, rgba(28, 28, 40, 0.95) 100%);
+    border: 1px solid rgba(120, 80, 200, 0.3);
+    border-left: 5px solid rgba(140, 90, 220, 0.8);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cardAgenda h2 {
+    font-size: 1.6em;
+    color: rgb(238, 234, 227);
+    margin: 0 0 4px 0;
+    font-family: "VampireWars", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.agendaSub {
+    color: #a99cc0;
+    font-size: 0.9em;
+    margin: 0 0 18px 0;
+}
+
+.listaAgenda {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itemAgenda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid rgba(140, 90, 220, 0.6);
+    transition: background 0.3s ease;
+}
+
+.itemAgenda:hover {
+    background: rgba(140, 90, 220, 0.12);
+}
+
+.itemAgendaInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.itemAgendaGrupo {
+    color: #f0ece5;
+    font-weight: 700;
+    font-size: 0.98em;
+}
+
+.itemAgendaMeta {
+    color: #a0a0a0;
+    font-size: 0.82em;
+}
+
+.formQuitar {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.btnQuitar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(145, 10, 10, 0.5);
+    background: rgba(145, 10, 10, 0.15);
+    color: rgb(145, 10, 10);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btnQuitar:hover {
+    background: rgb(145, 10, 10);
+    color: white;
+}
+
+.agendaVacia {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 16px 0;
+    margin: 0;
+}
+
+/* ========== BÚSQUEDA ========== */
+
+.barraBusqueda {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.barraBusqueda input {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px 16px;
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    background: rgba(8, 8, 8, 0.95);
+    color: #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.barraBusqueda input:focus {
+    outline: none;
+    border-color: rgb(145, 10, 10);
+    box-shadow: 0 0 12px rgba(145, 10, 10, 0.3);
+}
+
+.barraBusqueda input::placeholder {
+    color: #777;
+}
+
+.btnBuscar {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgb(145, 10, 10) 0%, rgb(145, 10, 10) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnBuscar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(145, 10, 10, 0.4);
+}
+
+.btnLimpiar {
+    padding: 12px 20px;
+    background: rgba(80, 80, 90, 0.3);
+    color: #ccc;
+    border: 1px solid rgba(120, 120, 130, 0.4);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btnLimpiar:hover {
+    background: rgba(100, 100, 110, 0.5);
+    color: white;
+}
+
+/* ========== LISTADO DE CONCIERTOS ========== */
+
+.listadoConciertos {
+    flex: 1;
+}
+
+.listadoConciertos > h2 {
+    font-size: 2em;
+    color: rgb(238, 234, 227);
+    margin: 0 0 28px 0;
+    font-family: "VampireWars", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.gridConciertos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.tarjetaConcierto {
+    background: linear-gradient(135deg, rgba(40, 40, 50, 0.9) 0%, rgba(32, 32, 45, 0.9) 100%);
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tarjetaConcierto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(145, 10, 10, 0.4) 0%, transparent 100%);
+    z-index: 1;
+}
+
+.tarjetaConcierto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(145, 10, 10, 0.3);
+    border-color: rgba(145, 10, 10, 0.6);
+}
+
+.headerTarjeta {
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(145, 10, 10, 0.2);
+}
+
+.generoTag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(145, 10, 10, 0.4), rgba(180, 15, 45, 0.3));
+    color: #d7b1b1;
+    border: 1px solid rgba(145, 10, 10, 0.4);
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+.badge.pronto {
+    background: rgba(255, 100, 20, 0.3);
+    color: #ff8844;
+    border: 1px solid rgba(255, 100, 20, 0.5);
+}
+
+.badge.pasado {
+    background: rgba(100, 100, 100, 0.25);
+    color: #999;
+    border: 1px solid rgba(120, 120, 120, 0.4);
+    animation: none;
+}
+
+.badge.privado {
+    background: rgba(145, 10, 10, 0.2);
+    color: #d7b1b1;
+    border: 1px solid rgba(145, 10, 10, 0.4);
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.cuerpoTarjeta {
+    padding: 24px 20px;
+}
+
+.cuerpoTarjeta h3 {
+    font-size: 1.5em;
+    color: rgb(238, 234, 227);
+    margin: 0 0 20px 0;
+    font-family: "VampireWars", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 6px rgba(145, 10, 10, 0.4);
+}
+
+.detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.detalle {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border-left: 3px solid rgba(145, 10, 10, 0.5);
+    transition: all 0.3s ease;
+}
+
+.detalle:hover {
+    background: rgba(145, 10, 10, 0.1);
+    border-left-color: rgb(145, 10, 10);
+}
+
+.detalle .icono {
+    font-size: 1.3em;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.detalle > div {
+    flex: 1;
+}
+
+.detalle .etiqueta {
+    margin: 0;
+    font-size: 0.8em;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.detalle .valor {
+    margin: 4px 0 0 0;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.pieTarjeta {
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(145, 10, 10, 0.2);
+}
+
+.formApunte {
+    margin: 0;
+}
+
+.btnApunte {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botones de gestión de un concierto propio (editar / borrar) */
+.accionesPropias {
+    display: flex;
+    gap: 10px;
+}
+
+.accionesPropias .formApunte {
+    flex: 1;
+}
+
+.btnApunte.editar {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: rgba(80, 80, 90, 0.4);
+    color: #ccc;
+    border: 1px solid rgba(120, 120, 130, 0.4);
+}
+
+.btnApunte.editar:hover {
+    background: rgba(100, 100, 110, 0.5);
+    color: white;
+}
+
+.btnApunte.borrar {
+    background: rgba(145, 10, 10, 0.2);
+    color: #e0b0b0;
+    border: 1px solid rgba(145, 10, 10, 0.5);
+}
+
+.btnApunte.borrar:hover {
+    background: rgb(145, 10, 10);
+    color: white;
+}
+
+.conciertoRealizado {
+    margin: 0;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.btnCancelarEdicion {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btnApunte.apuntarse {
+    background: linear-gradient(135deg, rgb(145, 10, 10) 0%, rgb(145, 10, 10) 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(145, 10, 10, 0.35);
+}
+
+.btnApunte.apuntarse:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(145, 10, 10, 0.55);
+}
+
+.btnApunte.quitarse {
+    background: rgba(63, 166, 91, 0.2);
+    color: #7dd9a4;
+    border: 1px solid rgba(63, 166, 91, 0.5);
+}
+
+.btnApunte.quitarse:hover {
+    background: rgba(145, 10, 10, 0.2);
+    color: rgb(145, 10, 10);
+    border-color: rgba(145, 10, 10, 0.5);
+}
+
+.tarjetaConcierto.apuntado {
+    border-color: rgba(63, 166, 91, 0.5);
+}
+
+.tarjetaConcierto.apuntado::before {
+    background: linear-gradient(90deg, rgba(63, 166, 91, 1) 0%, transparent 100%);
+}
+
+/* ========== PAGINACIÓN ========== */
+
+.paginacion {
+    margin-top: 40px;
+}
+
+/* ========== SIN CONCIERTOS ========== */
+
+.sinConciertos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px dashed rgba(145, 10, 10, 0.2);
+    border-radius: 12px;
+}
+
+.iconoVacio {
+    font-size: 4em;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.sinConciertos h3 {
+    font-size: 1.8em;
+    color: rgb(238, 234, 227);
+    margin: 0 0 12px 0;
+    font-family: "VampireWars", sans-serif;
+}
+
+.sinConciertos p {
+    color: #a0a0a0;
+    font-size: 1.05em;
+    margin: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 1200px) {
+    .contenedorBolos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .formularioAside {
+        position: relative;
+        top: auto;
+    }
+
+    .seccionHero h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorBolos {
+        padding: 24px 16px;
+    }
+
+    .cardFormulario {
+        padding: 24px;
+    }
+
+    .seccionHero {
+        padding: 40px 20px 30px;
+    }
+
+    .seccionHero h1 {
+        font-size: 2em;
+    }
+
+    .gridConciertos {
+        grid-template-columns: 1fr;
+    }
+
+    .listadoConciertos > h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedorBolos {
+        padding: 16px 12px;
+    }
+
+    .cardFormulario {
+        padding: 16px;
+    }
+
+    .seccionHero h1 {
+        font-size: 1.6em;
+    }
+
+    .seccionHero .subtitulo {
+        font-size: 1em;
+    }
+
+    .btnCrearBolo {
+        padding: 14px 18px;
+        font-size: 0.95em;
+    }
+}

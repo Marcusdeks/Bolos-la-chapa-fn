@@ -1,0 +1,162 @@
+@import url("estilos.css");
+
+.mainPerfil {
+    min-height: calc(100vh - 80px);
+    padding: 60px 24px;
+    background: linear-gradient(135deg, rgba(14, 14, 14, 0.97) 0%, rgba(22, 22, 32, 0.97) 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contenedorPerfil {
+    width: 100%;
+    max-width: 720px;
+    background: linear-gradient(135deg, rgba(40, 40, 50, 0.95) 0%, rgba(32, 32, 45, 0.95) 100%);
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    border-left: 5px solid rgba(145, 10, 10, 0.8);
+    border-radius: 12px;
+    padding: 48px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.contenedorPerfil h1 {
+    font-family: "VampireWars", sans-serif;
+    font-size: 2.4em;
+    color: rgb(238, 234, 227);
+    margin: 0 0 32px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 15px rgba(145, 10, 10, 0.6);
+}
+
+.subtituloPerfil {
+    font-family: "VampireWars", sans-serif;
+    font-size: 1.4em;
+    color: rgb(238, 234, 227);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 36px 0 20px 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(145, 10, 10, 0.25);
+}
+
+/* ── Datos de cabecera ── */
+
+.datosPerfil {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid rgba(145, 10, 10, 0.5);
+    flex-wrap: wrap;
+}
+
+.datosPerfil p {
+    margin: 0;
+    color: #c0b0a8;
+    font-size: 0.95em;
+}
+
+.datosPerfil strong {
+    color: rgb(145, 10, 10);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    margin-right: 6px;
+}
+
+/* ── Formulario ── */
+
+.formularioPerfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo.ancho {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-size: 0.88em;
+    color: #d0c0b8;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.campo input,
+.campo select {
+    padding: 14px 16px;
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    background: rgba(8, 8, 8, 0.95);
+    color: #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: rgb(145, 10, 10);
+    box-shadow: 0 0 12px rgba(145, 10, 10, 0.3);
+    background: rgba(12, 12, 18, 0.95);
+}
+
+.campo select option {
+    background: #1a1a22;
+    color: #e0e0e0;
+}
+
+.btnFormulario.ancho,
+.formularioPerfil .btnFormulario {
+    grid-column: 1 / -1;
+}
+
+.btnFormulario {
+    margin-top: 8px;
+}
+
+.btnFormulario:active {
+    transform: translateY(0);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 680px) {
+    .mainPerfil {
+        padding: 32px 16px;
+    }
+
+    .contenedorPerfil {
+        padding: 28px 20px;
+    }
+
+    .formularioPerfil {
+        grid-template-columns: 1fr;
+    }
+
+    .campo.ancho {
+        grid-column: auto;
+    }
+
+    .formularioPerfil .btnFormulario {
+        grid-column: auto;
+    }
+
+    .contenedorPerfil h1 {
+        font-size: 1.8em;
+    }
+}

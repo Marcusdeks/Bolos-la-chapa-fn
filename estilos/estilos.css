@@ -1,0 +1,382 @@
+
+:root {
+    --color-acento: rgb(145, 10, 10);
+    --color-acento-oscuro: #5a0f1c;
+    --color-acento-suave: rgba(145, 10, 10, 0.4);
+    --color-acento-medio: rgba(145, 10, 10, 0.2);
+    --color-texto-principal: rgb(238, 234, 227);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #000000;
+    color: white;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    align-items: center;        /* Centra verticalmente si hay texto al lado */
+}
+nav{
+    background-color: #161616;
+    color: white;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url("../imagenes/fondoCadenas.PNG");
+    background-repeat: repeat;
+    background-position: top left;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+aside{
+    background-color: rgba(32, 32, 32, 0.9);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+}
+
+main{
+    padding: 20px;
+    background-color: rgba(16, 16, 16, 0.9);
+    margin: 20px;
+    color: white;
+}
+
+/* ------------FOOTER (vista parcial compartida)-----------------*/
+.piePagina{
+    background-color: #161616;
+    border-top: 2px solid rgba(145, 10, 10, 0.5);
+    color: #b8a8a0;
+    margin-top: auto;
+}
+
+.pieContenido{
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.pieMarca{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pieLogo{
+    height: 48px;
+    width: auto;
+}
+
+.pieTitulo{
+    margin: 0;
+    font-family: "VampireWars", sans-serif;
+    color: rgb(238, 234, 227);
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.pieLema{
+    margin: 0;
+    font-size: 0.85em;
+    color: #8a7a72;
+}
+
+.pieRedes{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pieRedes a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(145, 10, 10, 0.4);
+    color: #b8a8a0;
+    transition: all 0.3s ease;
+}
+
+.pieRedes a:hover{
+    background: rgb(145, 10, 10);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.pieRedes svg{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.pieCopyright{
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 0.8em;
+    color: #6a5a52;
+}
+
+@media (max-width: 600px){
+    .pieContenido{
+        flex-direction: column;
+        text-align: center;
+    }
+    .pieMarca{
+        flex-direction: column;
+    }
+}
+
+/* ------------CLASES-----------------*/
+
+.logo{
+    height: 80px;
+    width: auto;
+     margin-right: 100px;
+}
+
+.tituloPrincipal{
+    font-family: "vampireWars", sans-serif;
+    color: rgb(238, 234, 227);
+}
+
+.ulNav{
+    display: flex; /* Activa Flexbox */
+    list-style: none; /* Elimina los puntos */
+    padding: 0; /* Elimina sangrado */
+    margin: auto;
+    gap: 20px; /* Añade espacio entre elementos (opcional) */
+    text-align: center;
+}
+
+.ulNav a{
+    color: rgb(145, 10, 10);
+    font: bold 18px Arial, sans-serif;
+    text-decoration: none;
+}
+
+.ulNav a.seleccionado{
+    color: #5a0f1c;
+}
+
+.btnLog{
+    margin-left: auto;
+    background-color: black;
+    border: 2px solid rgb(145, 10, 10);
+    border-radius: 6px;
+    color: rgb(223, 219, 219);
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btnLog a{
+    color: rgb(223, 219, 219);
+    text-decoration: none;
+}
+.btnLog a:visited{
+    color: rgb(223, 219, 219);
+}
+
+/* ------------CLASES MAIN INDICE-----------------*/
+.contenido{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    flex: 1;
+    min-height: 0;
+}
+
+.manoCornuta{
+    height: 200px;
+    width: 100%;
+}
+.gridMain{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+.h2Main{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "vampireWars", sans-serif;
+    color: rgb(238, 234, 227);
+}
+
+.cardConcierto{
+    background-color: rgba(32, 32, 32, 0.95);
+    border: 1px solid rgba(145, 10, 10, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.imagenConcierto{
+    display: block;
+    width: 100%;
+}
+
+.descripcionConcierto{
+    padding: 12px 14px 16px;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px){
+    .gridMain{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px){
+    .contenido{
+        grid-template-columns: 1fr;
+    }
+
+    .gridMain{
+        grid-template-columns: 1fr;
+    }
+}
+/*//////////////////BOTÓN DE FORMULARIO (compartido)////////////////////////////*/
+.btnFormulario {
+    padding: 16px 32px;
+    background: linear-gradient(135deg, rgb(145, 10, 10) 0%, rgb(145, 10, 10) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(145, 10, 10, 0.4);
+}
+
+.btnFormulario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(145, 10, 10, 0.6);
+}
+
+/*//////////////////PAGINACIÓN (compartida)////////////////////////////*/
+.infoPaginacion {
+    color: #888;
+    font-size: 0.88em;
+    margin: 0 0 16px 0;
+    letter-spacing: 0.3px;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btnPag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: rgba(40, 40, 50, 0.9);
+    border: 1px solid rgba(145, 10, 10, 0.3);
+    color: #d0c0b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.btnPag:hover {
+    background: rgba(145, 10, 10, 0.2);
+    border-color: rgba(145, 10, 10, 0.7);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btnPag.activo {
+    background: linear-gradient(135deg, rgb(145, 10, 10), rgb(145, 10, 10));
+    border-color: rgb(145, 10, 10);
+    color: white;
+    box-shadow: 0 4px 14px rgba(145, 10, 10, 0.4);
+    cursor: default;
+    pointer-events: none;
+}
+
+.btnPag.desactivado {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+.btnPagNav {
+    padding: 0 18px;
+    font-size: 0.9em;
+}
+
+/*//////////////////MENSAJES DE ÉXITO/ERROR (compartidos)////////////////////////////*/
+.mensaje {
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.mensaje.exito {
+    background: rgba(20, 93, 39, 0.4);
+    border: 1px solid rgba(63, 166, 91, 0.5);
+    color: #d9ffe0;
+}
+
+.mensaje.error {
+    background: rgba(180, 20, 20, 0.3);
+    border: 1px solid rgba(145, 10, 10, 0.5);
+    color: #ffd0d0;
+}
+@import url("https://db.onlinewebfonts.com/c/4ffaba717fb05bc71ce2b6a90c7b9772?family=CCStickyFingers");
+
+@font-face {
+    font-family: "BlackMustang";
+    src: url("../fuentes/Black Mustang.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VampireWars";
+    src: url("../fuentes/Vampire Wars.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VampireWarsItalic";
+    src: url("../fuentes/Vampire Wars.woff2") format("woff2");
+    font-display: swap;
+}
+
+

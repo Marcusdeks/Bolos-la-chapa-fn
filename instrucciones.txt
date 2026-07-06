@@ -1,0 +1,10 @@
+Usuario:
+	nombre:Profe
+	contraseña:MasterD
+
+UsuarioAdmin:
+	N:Sabbath
+	C:MasterD1
+
+Me he tomado la libertad de poner "Bolos" en lugar de "citas" para adaptar mas 
+correctamente la pagina a mi idea. Espero que me dejeis esa licencia.
