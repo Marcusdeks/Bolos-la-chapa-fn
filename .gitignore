@@ -1,0 +1,11 @@
+# Configuración local del editor / herramientas
+.claude/
+.vscode/
+.idea/
+
+# Imágenes subidas desde el panel de administración (se generan en tiempo de ejecución)
+imagenes/noticia_*
+
+# Sistema
+Thumbs.db
+.DS_Store

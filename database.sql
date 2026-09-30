@@ -88,11 +88,14 @@ CREATE TABLE asistencias (
 INSERT INTO users_data VALUES
     (1,'Carlos','Martinez','carlos@gmail.com','666111222','2000-05-10','Barcelona','Hombre'),
     (2,'Laura','Gomez','laura@gmail.com','666333444','1998-09-20','Madrid','Mujer'),
-    (3,'Marcus','Deks','marcusdeks@hotmail.com','663076011','1995-06-29','plaza ramon mir','Hombre');
+    (3,'Marcus','Deks','marcusdeks@hotmail.com','663076011','1995-06-29','plaza ramon mir','Hombre'),
+    (4,'Profe','MasterD','profe@masterd.es','600000000','1990-01-01',NULL,NULL);
 
 -- Usuario administrador:  usuario = Sabbath   contraseña = MasterD1
+-- Usuario normal:         usuario = Profe     contraseña = MasterD
 INSERT INTO users_login VALUES
-    (1,3,'Sabbath','$2y$10$0nStsm4AYoCvK.ZSc/Jzf.40BsOAmw.Lc6Cn7DiNkbA6U4/tZ32di','admin');
+    (1,3,'Sabbath','$2y$10$0nStsm4AYoCvK.ZSc/Jzf.40BsOAmw.Lc6Cn7DiNkbA6U4/tZ32di','admin'),
+    (2,4,'Profe','$2y$10$nkeUjHydmWvKdyn./EIWTeBMfu.knxmQRtW.2yBJkiQ.CKQaON/PS','user');
 
 INSERT INTO noticias VALUES
     (1,'Tajuña rock 2026','Helloween.jpg','El mejor festival hasta la fecha, 100% metal autentico.','2026-05-01',1),
