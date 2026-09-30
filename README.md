@@ -1,4 +1,4 @@
-# 🤘 Bolos La Chapa
+# Bolos La Chapa
 
 > **Los mejores bolos pal mejor público.**
 > Aplicación web para descubrir, organizar y apuntarse a conciertos de metal, con noticias musicales, perfiles de usuario y un panel de administración completo.
@@ -9,7 +9,7 @@ Proyecto final de curso de desarrollo web, hecho **100 % en vanilla**: PHP sin f
 
 ---
 
-## 📑 Índice
+## Índice
 
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologías](#-tecnologías)
@@ -24,7 +24,7 @@ Proyecto final de curso de desarrollo web, hecho **100 % en vanilla**: PHP sin f
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 ### Visitantes (sin sesión)
 - **Inicio**: presentación de la empresa y galería de conciertos organizados.
@@ -64,7 +64,7 @@ Proyecto final de curso de desarrollo web, hecho **100 % en vanilla**: PHP sin f
 
 ---
 
-## 🏗 Arquitectura y patrones
+## Arquitectura y patrones
 
 Aunque es vanilla, el código está organizado siguiendo patrones reales para que no sea una "sopa de PHP y HTML":
 
@@ -81,7 +81,7 @@ Aunque es vanilla, el código está organizado siguiendo patrones reales para qu
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 bolosLaChapa/
@@ -115,7 +115,7 @@ bolosLaChapa/
 
 ---
 
-## 🗄 Base de datos
+## Base de datos
 
 Base de datos `bolos_la_chapa` con 5 tablas relacionadas mediante claves foráneas con `ON DELETE CASCADE`:
 
@@ -136,7 +136,7 @@ users_data (1) ──── (1) users_login        datos personales ↔ credenci
 
 ---
 
-## 🔒 Seguridad
+## Seguridad
 
 - **Contraseñas** cifradas con `password_hash()` (bcrypt) y comprobadas con `password_verify()`. Nunca se guardan en claro.
 - **Consultas preparadas** (`prepare` + `bind_param`) en todos los datos que vienen del usuario, para evitar **inyección SQL**.
@@ -147,11 +147,11 @@ users_data (1) ──── (1) users_login        datos personales ↔ credenci
 
 ---
 
-## 🚀 Cómo probarlo
+## Cómo probarlo
 
 ### Opción A: demo online
 
-👉 **[Enlace a la demo en Render](https://TU-APP.onrender.com)**
+https://bolos-la-chapa-fn.onrender.com
 
 > Está en el plan gratuito de Render. Si lleva un rato sin visitas, la primera carga tarda unos 30–60 segundos en "despertar". La base de datos **se reinicia** con los datos de ejemplo cada vez que el servicio arranca, así que puedes probar lo que quieras sin miedo.
 
@@ -186,7 +186,7 @@ Y abre <http://localhost:8080>.
 
 ---
 
-## 👤 Usuarios de prueba
+## Usuarios de prueba
 
 | Rol | Usuario | Contraseña |
 |-----|---------|------------|
@@ -197,7 +197,7 @@ También puedes registrar un usuario nuevo desde **Iniciar sesión → Regístra
 
 ---
 
-## 🧪 Guía de pruebas
+## Guía de pruebas
 
 Un recorrido rápido para ver todo en unos 5 minutos:
 
@@ -223,7 +223,7 @@ Un recorrido rápido para ver todo en unos 5 minutos:
 
 ---
 
-## 📚 Qué he aprendido
+## Qué he aprendido
 
 - Estructurar una aplicación PHP **sin framework**: separar infraestructura (`core`), acceso a datos (`models`) y vistas.
 - Aplicar **patrones de diseño** (Singleton, Facade, Table Data Gateway, Autoloading) y entender *por qué* existen.
@@ -235,8 +235,8 @@ Un recorrido rápido para ver todo en unos 5 minutos:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-**Marcus**: [GitHub @Marcusdeks](https://github.com/Marcusdeks)
+**Marc Carretero**: [GitHub @Marcusdeks](https://github.com/Marcusdeks)
 
 Proyecto final de curso de desarrollo web. 🤘
